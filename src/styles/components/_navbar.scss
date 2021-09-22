@@ -1,0 +1,67 @@
+$navBackground: #343434;
+$active-link: white;
+$current-link: gray;
+$font-light: white;
+$font-dark: black;
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  height: max-content;
+  background-color: $navBackground;
+  color: $font-light;
+  div {
+    margin: auto 0;
+    display: flex;
+    svg {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  li {
+    padding: 0 1.75rem;
+  }
+  .btn {
+    padding: 0;
+    a {
+      display: block;
+      padding: 1rem 1.75rem;
+      color: $font-light;
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: $active-link;
+      a {
+        color: $font-dark;
+      }
+    }
+  }
+}
+@media screen and (max-width: 580px) {
+  .navBar {
+    flex-direction: column;
+    div {
+      li {
+        padding: 1rem;
+      }
+      justify-content: space-between;
+      svg {
+        display: block;
+        visibility: visible;
+        font-size: 2rem;
+        margin: auto 1rem;
+        cursor: pointer;
+        path {
+          stroke: $font-light;
+        }
+      }
+    }
+    .btnContainer {
+      flex-direction: column;
+      &.closed {
+        height: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}

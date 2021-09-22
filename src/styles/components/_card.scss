@@ -1,0 +1,51 @@
+.card {
+  width: clamp(30%, 400px, 90%);
+  margin: 1rem;
+  background-color: white;
+  //   border: 1px solid #444;
+  margin-inline: auto;
+  border-radius: 0.75rem;
+  overflow: hidden;
+
+  box-shadow: inset $dark-shadow;
+  .imgContainer {
+    box-shadow: $dark-shadow;
+    img {
+      display: block;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      text-align: center;
+      margin: 1rem;
+    }
+    p {
+      width: clamp(27%, 405px, 90%);
+      font-size: 14px;
+      margin-inline: auto;
+      &::first-letter {
+        margin-left: 3rem;
+      }
+    }
+  }
+  .btnContainer {
+    display: flex;
+    justify-content: center;
+    button {
+      background: $clr-green-light;
+      color: $font-light;
+      font-weight: bold;
+      border-radius: 0.25rem;
+      border: none;
+      padding: 0.5rem 2.5rem;
+      margin: 1rem;
+
+      transition: background-color 300ms ease;
+      &:hover {
+        background-color: $clr-green-dark;
+      }
+    }
+  }
+}
