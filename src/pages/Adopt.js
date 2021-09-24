@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Form from '../components/Form';
 
 function Adopt() {
     return (
-        <div>
+        <div className='adopt'>
             <h1>Adopt Page</h1>
+            <Form/>
         </div>
     )
 }
