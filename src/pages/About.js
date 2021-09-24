@@ -1,14 +1,20 @@
 import React from 'react';
 import InfoCard from '../components/InfoCard'
 import Banner from '../components/Banner'
+import '../styles/index.scss'
 
 function About() {
     return (
         <div>
-            <Banner image="https://animalcareinfo.com/wp-content/uploads/2018/04/AdobeStock_129584968-1024x388.jpeg" title="About Us"/>
+            <Banner image="https://animalcareinfo.com/wp-content/uploads/2018/04/AdobeStock_129584968-1024x388.jpeg" title="About Us" />
             <div className="cardContainer">
-                <InfoCard title="About Us" content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam unde corporis in quia aspernatur et, praesentium at quas quis iure."/>
-                <InfoCard title="What We Do" content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam unde corporis in quia aspernatur et, praesentium at quas quis iure."/>
+                <InfoCard title="About Us" content="The West-MEC Veterinary Sciences program has a partnership with Pinal County Animal Control to rescue animals. We are at the West mec northeast campus which is located at 1617 W Williams Dr Phoenix, AZ 85027." />
+                <InfoCard title="What We Do" content="What we do here at the West-MEC Veterinary Sciences program is have Students work with a veterinarian to spay, neuter, and vaccinate the animals to prepare them for adoption. These four-legged companions are available for adoption and looking for their forever home." />
+            </div>
+            <div className='photoGird'>
+                <div className='divImage'><img className='imgVet' src="https://west-mec.edu/wp-content/uploads/2018/04/0005_vet-2.jpg" alt="" /></div>
+                <div className='divImage'><img className='imgVet' src="https://west-mec.edu/wp-content/uploads/2020/09/Veteriniary-2000x1331.jpg" alt="" /></div>
+                <div className='divImage'><img className='imgVet' src="https://west-mec.edu/wp-content/uploads/2018/04/0006_vet-1.jpg" alt="" /></div>
             </div>
         </div>
     )
