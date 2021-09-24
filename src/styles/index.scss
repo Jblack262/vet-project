@@ -1,14 +1,16 @@
 //important stuff
-@import "./base/index";
-@import "./themes/defaultTheme";
-@import "./util/index";
+@import './base/index';
+@import './themes/defaultTheme';
+@import './util/index';
 
 //page layout stuff
-@import "./layout/index";
+@import './layout/index';
+@import './layout/adopt';
 
 //component stuff
-@import "./components/navbar";
-@import "./components/card";
-@import "./components/footer";
-@import "./components/banner";
-@import "./components/infoCard";
+@import './components/navbar';
+@import './components/card';
+@import './components/footer';
+@import './components/banner';
+@import './components/infoCard';
+@import './components/form';

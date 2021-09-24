@@ -210,6 +210,13 @@ body {
   justify-content: center;
 }
 
+.adopt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
 .navBar {
   display: flex;
   justify-content: space-between;
@@ -435,6 +442,13 @@ footer .row .socials ul li a:active {
 }
 .infoCard p::first-letter {
   margin-left: 3rem;
+}
+
+embed.form {
+  width: 60%;
+  height: 60vh;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=index.css.map */
