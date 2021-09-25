@@ -1,4 +1,5 @@
-$slideWidth: clamp(30%, 600px, 90%);
+$slideWidth: clamp(30vw, 600px, 90vw);
+// $slideWidth: 600px;
 $slideMargin: 2rem;
 $btnHeight: 0.75rem;
 
@@ -11,7 +12,7 @@ $btnHeight: 0.75rem;
 
   margin: 0;
   margin-top: $slideMargin;
-  margin-inline: auto;
+  // margin-inline: auto;
 
   display: flex;
   flex-direction: column;
@@ -58,7 +59,7 @@ $btnHeight: 0.75rem;
   width: $slideWidth;
   height: max-content;
 
-  margin-inline: auto;
+  // margin-inline: auto;
   margin-bottom: $slideMargin;
   display: flex;
   justify-content: space-around;

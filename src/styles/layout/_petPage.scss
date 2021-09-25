@@ -1,0 +1,8 @@
+.petContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  .list {
+    list-style-type: circle;
+  }
+}

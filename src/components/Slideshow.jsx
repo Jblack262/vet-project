@@ -1,7 +1,8 @@
 import React from 'react';
 import {BiLeftArrow, BiRightArrow} from 'react-icons/bi';
 
-function Slideshow({images}) {
+function Slideshow({images, name}) {
+    console.log(images)
     const [index, setIndex] = React.useState(0);
     const slideLeft = () => {
         if (index > 0) {
@@ -24,7 +25,7 @@ function Slideshow({images}) {
                     <BiLeftArrow onClick={() => slideLeft()}/>
                 </div>
 
-                <img src={images[index].image} alt="cool" />
+                {images[index] && <img src={images[index]} alt={name} />}
 
                 <div className="iconContainer right">
                     <BiRightArrow onClick={() => slideRight()}/>
