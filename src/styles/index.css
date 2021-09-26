@@ -236,13 +236,57 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.petContainer .list {
+.petContainer .petDescription {
+  margin-inline: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.petContainer .petDescription .name {
+  margin: 0.5rem auto;
+}
+
+.petContainer .petDescription .list {
   list-style-type: circle;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .petContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .petContainer .slideContainer {
+    margin-inline: auto;
+  }
+  .petContainer .buttonContainer {
+    margin-inline: auto;
+  }
+  .petContainer .petDescription {
+    width: clamp(30vw, 600px, 90%);
+    margin-inline: auto;
+    margin-bottom: 2rem;
+  }
 }
 
 .banner {
@@ -616,7 +660,7 @@ footer .row .socials ul li a:active {
   height: 350px;
   overflow: hidden;
   border-radius: 0.5rem;
-  margin: 0;
+  margin: 0 2rem;
   margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -682,6 +726,7 @@ footer .row .socials ul li a:active {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  margin: 0 2rem;
   margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;

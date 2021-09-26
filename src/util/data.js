@@ -2,6 +2,7 @@ export const data = [
     {
         id: 1,
         name: "Wasabi",
+        species: "Cat",
         gender: "Female",
         breed: "Domestic Shorthair",
         age: "12 weeks old",
@@ -9,6 +10,10 @@ export const data = [
         images: [
             require("../images/dog.jpg").default,
             require("../images/angry-dog.jpg").default,
+            require("../images/pug.jpg").default,
+            require("../images/pug.jpg").default,
+            require("../images/pug.jpg").default,
+            require("../images/pug.jpg").default,
             require("../images/pug.jpg").default,
         ]
     },
