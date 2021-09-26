@@ -7,14 +7,14 @@ function Navbar(props) {
     return (
         <ul className="navBar">
             <div>
-                <li>West-MEC Veterinary Science</li>
+                <li className="btn title"><Link to="/">West-MEC Veterinary Science</Link></li>
                 {open ? <GrClose onClick={() => setOpen(!open)}/> : <GrMenu onClick={() => setOpen(!open)}/>}
                 
             </div>
             <div className={"btnContainer" + (!open ? " closed" : "")}>
-                <li className="btn"><Link to="/">Home </Link></li>
-                <li className="btn"><Link to="/about">About </Link></li>
-                <li className="btn"><Link to="/adopt">Adopt </Link></li>
+                <li className="btn"><Link to="/">Home</Link></li>
+                <li className="btn"><Link to="/about">About</Link></li>
+                <li className="btn"><Link to="/adopt">Adopt</Link></li>
             </div>
         </ul>
     )

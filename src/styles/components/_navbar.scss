@@ -28,7 +28,7 @@ $font-dark: black;
       color: $font-light;
       text-decoration: none;
     }
-    &:hover {
+    &:hover:not(.title) {
       background-color: $active-link;
       a {
         color: $font-dark;

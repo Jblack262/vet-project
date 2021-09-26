@@ -406,7 +406,9 @@ body {
     transition: transform 300ms ease;
     transition: transform 300ms ease, -webkit-transform 300ms ease;
   }
-  .card .content * {
+  .card .content h2,
+  .card .content p,
+  .card .content .btnContainer {
     opacity: 0;
     -webkit-transition: opacity 200ms linear;
     transition: opacity 200ms linear;
@@ -426,7 +428,11 @@ body {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  .card:hover .content *, .card:focus-within .content * {
+  .card:hover .content h2,
+  .card:hover .content p,
+  .card:hover .content .btnContainer, .card:focus-within .content h2,
+  .card:focus-within .content p,
+  .card:focus-within .content .btnContainer {
     opacity: 1;
   }
 }
@@ -610,11 +616,11 @@ footer .row .socials ul li a:active {
   text-decoration: none;
 }
 
-.navBar .btn:hover {
+.navBar .btn:hover:not(.title) {
   background-color: white;
 }
 
-.navBar .btn:hover a {
+.navBar .btn:hover:not(.title) a {
   color: black;
 }
 

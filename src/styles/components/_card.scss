@@ -74,7 +74,9 @@
       margin-top: auto;
       background-color: rgba(0, 0, 0, 0.5);
       transform: translateY(100%);
-      * {
+      h2,
+      p,
+      .btnContainer {
         opacity: 0;
         transition: opacity 200ms linear;
       }
@@ -96,7 +98,9 @@
     &:focus-within {
       .content {
         transform: translateY(0);
-        * {
+        h2,
+        p,
+        .btnContainer {
           opacity: 1;
         }
       }
