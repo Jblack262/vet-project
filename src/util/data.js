@@ -52,30 +52,30 @@ export const data = [
             require("../images/pug.jpg").default,
         ]
     },
-    {
-        id: 5,
-        name: "Miranda",
-        gender: "Female",
-        breed: "Domestic Shorthair",
-        age: "12 weeks old",
-        campus: "Northeast Campus",
-        images: [
-            require("../images/dog.jpg").default,
-            require("../images/angry-dog.jpg").default,
-            require("../images/pug.jpg").default,
-        ]
-    },
-    {
-        id: 6,
-        name: "Miranda",
-        gender: "Female",
-        breed: "Domestic Shorthair",
-        age: "12 weeks old",
-        campus: "Northeast Campus",
-        images: [
-            require("../images/dog.jpg").default,
-            require("../images/angry-dog.jpg").default,
-            require("../images/pug.jpg").default,
-        ]
-    },
+    // {
+    //     id: 5,
+    //     name: "Miranda",
+    //     gender: "Female",
+    //     breed: "Domestic Shorthair",
+    //     age: "12 weeks old",
+    //     campus: "Northeast Campus",
+    //     images: [
+    //         require("../images/dog.jpg").default,
+    //         require("../images/angry-dog.jpg").default,
+    //         require("../images/pug.jpg").default,
+    //     ]
+    // },
+    // {
+    //     id: 6,
+    //     name: "Miranda",
+    //     gender: "Female",
+    //     breed: "Domestic Shorthair",
+    //     age: "12 weeks old",
+    //     campus: "Northeast Campus",
+    //     images: [
+    //         require("../images/dog.jpg").default,
+    //         require("../images/angry-dog.jpg").default,
+    //         require("../images/pug.jpg").default,
+    //     ]
+    // },
 ]

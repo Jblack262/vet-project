@@ -65,6 +65,11 @@
       }
     }
   }
+  &.empty {
+    background: none;
+    box-shadow: none;
+    visibility: hidden;
+  }
 }
 
 @media screen and (min-width: 768px) {
