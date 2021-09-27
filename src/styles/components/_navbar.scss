@@ -1,6 +1,5 @@
 $navBackground: #343434;
 $active-link: white;
-$current-link: gray;
 $font-light: white;
 $font-dark: black;
 
@@ -29,7 +28,7 @@ $font-dark: black;
       color: $font-light;
       text-decoration: none;
     }
-    &:hover {
+    &:hover:not(.title) {
       background-color: $active-link;
       a {
         color: $font-dark;

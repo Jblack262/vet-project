@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Form() {
-    const questions = [
+    /* const questions = [
         'First & Last Name',
         'Occupation',
         'Address',
@@ -19,7 +19,7 @@ function Form() {
         ['What pets do you currently have in your home (specific type and number)?', 1],
         ['Are your pets sterilized and up to date on vaccinations?', ['Yes', 'No', "I don't have any other pets"]]
 
-    ];
+    ]; */
     return (
         <>
             <h1>Adoption Application</h1>

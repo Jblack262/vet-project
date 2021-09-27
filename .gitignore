@@ -11,6 +11,10 @@
 # production
 /build
 
+#styling
+/src/styles/index.css
+/src/styles/index.css.map
+
 # misc
 .DS_Store
 .env.local
