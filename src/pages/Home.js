@@ -28,15 +28,12 @@ function Home({data, selectPet}) {
     return (
         <div>
             <Banner image="https://animalcareinfo.com/wp-content/uploads/2018/04/AdobeStock_129584968-1024x388.jpeg" title="Veterinary  Science"/>
-            <div className="cardContainer">
+            {isLoading && <Load />}
+            {!isLoading && <div className="cardContainer">
                 {data.map((pet) => {
                     return (
                         <Card key={pet.id} pet={pet} selectPet={selectPet}/>
-                        // if () {
-                        //     console.log('yay')
-                        // }
                     )
-                    // {data.length % columns === 0 && <h1>Hello World</h1>}
                 })}
                 {
                     [...Array(columns - (data.length % columns))].map((element, index) => { //gets the remainder of cards that should be left to make the flexbox follow a grid pattern
@@ -49,7 +46,7 @@ function Home({data, selectPet}) {
                         }
                     })
                 }
-            </div>
+            </div>}
         </div>
     )
 }
