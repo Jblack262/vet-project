@@ -4,7 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import {Home, Adopt, About, PetPage} from './pages';
+import {Home, Adopt, About, PetPage, Error} from './pages';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -27,6 +27,7 @@ function App() {
             <Route path="/about" exact component={() => <About />} />
             <Route path="/adopt" exact component={() => <Adopt />} />
             <Route path="/pets" exact component={() => <PetPage pet={currPet} />} />
+            <Route exact component={() => <Error/>} />
         </Switch>
 
         <Footer />
