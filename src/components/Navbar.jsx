@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import {GrMenu, GrClose} from 'react-icons/gr'
 
 function Navbar(props) {
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
     return (
         <ul className="navBar">
             <div>
