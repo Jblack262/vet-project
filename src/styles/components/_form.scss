@@ -1,8 +1,47 @@
-embed.form {
-    width: 60%;
-    height: 60vh;
+form.adopt-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $clr-primary-4;
+    border-radius: $radius;
+    padding-top: 20px;
+    box-sizing: border-box;
+    border: 4px solid $clr-white;
+    color: $clr-white;
+    box-shadow: $dark-shadow, inset $dark-shadow;
+
     margin: {
-        top: 20px;
-        bottom: 30px;
+        top: 15px;
+        bottom: 15px;
+    }
+    h1 {
+        font-size: 29px;
+        margin-bottom: 20px;
+    }
+    .question {
+        display: block;
+        min-width: 95%;
+        box-sizing: border-box;
+        padding: 20px;
+        border: 1.5px solid $clr-white;
+        margin-bottom: 20px;
+        text-align: start;
+        h1 {
+            font-size: 20px;
+        }
+        input {
+            width: 100%;
+            padding-bottom: 4px;
+            border-bottom: 1px solid $clr-white;
+            background-color: $clr-primary-5;
+            color: $clr-white;
+            &:focus {
+                outline: none;
+            }
+            &::placeholder {
+                color: $clr-accent-9;
+            }
+        }
     }
 }
