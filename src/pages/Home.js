@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../components/Card';
 import Banner from '../components/Banner'
+import Load from '../components/Load'
 
 function Home({data, selectPet}) {
     const [columns, setColumns] = useState(1); //keeps track of number of columns to make empty divs to make grid look pretty
 
+    // const [windowWidth, setWindowWidth] = useState(undefined);
+    const [isLoading,setIsLoading] = useState(true)
     useEffect(() => {
+        setTimeout(() => {
+            setIsLoading()
+        }, 2000);
         function handleResize() { //set columns based on screen width
             if (window.innerWidth >= 1200) {
                 setColumns(3);

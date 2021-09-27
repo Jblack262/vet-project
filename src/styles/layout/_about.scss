@@ -1,34 +1,37 @@
-.divImage{
-    width: 32vw;
-    height: 40vh;
+.divImage {
+  width: 32vw;
+  height: 40vh;
 }
 
-.imgVet{
+.imgVet {
+  width: 100%;
+  height: 100%;
+  box-shadow: rgb(68, 68, 68) 3px 3px 3px 3px;
+  border-radius: 30px;
+}
+.imgVet:hover {
+  box-shadow: rgb(73, 73, 73) 4px 4px 4px 4px;
+}
+.photoGird {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 864px) {
+  .divImage {
+    width: 40vw;
+    height: 40vh;
+    margin: 0 auto;
+  }
+  .imgVet {
     width: 100%;
     height: 100%;
     box-shadow: rgb(73, 73, 73) 3px 3px 3px 3px;
     border-radius: 30px;
-}
-.photoGird{
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 1.5rem;
-}
-@media screen and (max-width: 864px) {
-    .divImage{
-    width: 40vw;
-    height: 40vh;
-    margin: 0 auto;
-    }
-    .imgVet{
-        width: 100%;
-        height: 100%;
-        box-shadow: rgb(73, 73, 73) 3px 3px 3px 3px;
-        border-radius: 30px;
-    }
-    .photoGird{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  }
+  .photoGird {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
