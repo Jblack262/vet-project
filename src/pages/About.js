@@ -13,7 +13,7 @@ function About() {
             </div>
             <div className='photoGird'>
                 <div className='divImage'><img className='imgVet' src="https://west-mec.edu/wp-content/uploads/2018/04/0005_vet-2.jpg" alt="" /></div>
-                <div className='divImage'><img className='imgVet' src="https://west-mec.edu/wp-content/uploads/2020/09/Veteriniary-2000x1331.jpg" alt="" /></div>
+                <div className='divImage'><img className='imgVet' src="https://west-mec.edu/wp-content/uploads/2018/04/0004_vet-3.jpg" alt="" /></div>
                 <div className='divImage'><img className='imgVet' src="https://west-mec.edu/wp-content/uploads/2018/04/0006_vet-1.jpg" alt="" /></div>
             </div>
         </div>
