@@ -1,6 +1,6 @@
 .divImage {
-  width: 32vw;
-  height: 40vh;
+  width: 31rem;
+  height: 20rem;
 }
 
 .imgVet {
@@ -17,9 +17,9 @@
   justify-content: space-evenly;
   margin-bottom: 1.5rem;
 }
-@media screen and (max-width: 864px) {
+@media screen and (max-width: 1200px) {
   .divImage {
-    width: 50vw;
+    width: 25rem;
     height: 40vh;
     margin: 0 auto;
   }
