@@ -8,6 +8,9 @@ footer {
   .row {
     display: flex;
     justify-content: space-around;
+    &.main {
+      margin-bottom: 1rem;
+    }
     .col {
       flex-grow: 1;
       flex-shrink: 1;

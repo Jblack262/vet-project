@@ -1,9 +1,9 @@
 .card {
   width: clamp(30%, 400px, 90%);
-  margin: 1rem;
+  margin: 0.5rem;
   background-color: white;
   //   border: 1px solid #444;
-  margin-inline: auto;
+  // margin-inline: auto;
   border-radius: $radius;
   overflow: hidden;
 

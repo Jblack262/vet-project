@@ -3,7 +3,7 @@
   min-height: 300px;
   margin: 1rem;
   border-radius: $radius;
-  background-color: $clr-primary-3;
+  background-color: $clr-primary-2;
   box-shadow: inset $dark-shadow, $dark-shadow;
   h1 {
     color: white;
@@ -27,7 +27,6 @@
 }
 @media screen and (max-width: 865px) {
   .infoCard {
-    box-shadow: none;
     h1 {
       width: 15rem;
     }
@@ -38,7 +37,6 @@
 }
 @media screen and (max-width: 400px) {
   .infoCard {
-    box-shadow: none;
     h1 {
       font-size: 1.3rem;
       width: 12rem;
@@ -51,7 +49,6 @@
 
 @media screen and (max-width: 230px) {
   .infoCard {
-    box-shadow: none;
     h1 {
       font-size: 1rem;
       width: 7rem;

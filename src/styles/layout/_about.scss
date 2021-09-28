@@ -1,16 +1,16 @@
 .divImage {
-  width: 31rem;
+  width: 30rem;
   height: 20rem;
 }
 
 .imgVet {
   width: 100%;
   height: 100%;
-  box-shadow: rgb(68, 68, 68) 3px 3px 3px 3px;
-  border-radius: 30px;
+  border-radius: $radius;
+  box-shadow: none;
 }
 .imgVet:hover {
-  box-shadow: rgb(73, 73, 73) 4px 4px 4px 4px;
+  box-shadow: none;
 }
 .photoGird {
   display: flex;
@@ -26,8 +26,7 @@
   .imgVet {
     width: 100%;
     height: 100%;
-    box-shadow: rgb(73, 73, 73) 3px 3px 3px 3px;
-    border-radius: 30px;
+    border-radius: $radius;
   }
   .photoGird {
     display: block;
