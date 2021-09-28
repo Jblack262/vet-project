@@ -216,11 +216,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-block: 0.5rem;
 }
 
 .divImage {
-  width: 32vw;
-  height: 40vh;
+  width: 31rem;
+  height: 20rem;
 }
 
 .imgVet {
@@ -246,9 +247,9 @@ body {
   margin-bottom: 1.5rem;
 }
 
-@media screen and (max-width: 864px) {
+@media screen and (max-width: 1200px) {
   .divImage {
-    width: 50vw;
+    width: 25rem;
     height: 40vh;
     margin: 0 auto;
   }
@@ -358,9 +359,8 @@ body {
 
 .card {
   width: clamp(30%, 400px, 90%);
-  margin: 1rem;
+  margin: 0.5rem;
   background-color: white;
-  margin-inline: auto;
   border-radius: 0.75rem;
   overflow: hidden;
   -webkit-box-shadow: inset 0 0px 15px rgba(0, 0, 0, 0.8);
@@ -583,8 +583,6 @@ footer .row .socials ul a {
   margin: 1rem;
   border-radius: 0.75rem;
   background-color: #2e73b8;
-  -webkit-box-shadow: inset 0 0px 15px rgba(0, 0, 0, 0.8), 0 0px 15px rgba(0, 0, 0, 0.8);
-          box-shadow: inset 0 0px 15px rgba(0, 0, 0, 0.8), 0 0px 15px rgba(0, 0, 0, 0.8);
 }
 
 .infoCard h1 {
@@ -606,6 +604,35 @@ footer .row .socials ul a {
   font-size: 18px;
   width: clamp(27%, 405px, 90%);
   margin-inline: auto;
+}
+
+@media screen and (max-width: 865px) {
+  .infoCard h1 {
+    width: 15rem;
+  }
+  .infoCard p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .infoCard h1 {
+    font-size: 1.3rem;
+    width: 12rem;
+  }
+  .infoCard p {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 230px) {
+  .infoCard h1 {
+    font-size: 1rem;
+    width: 7rem;
+  }
+  .infoCard p {
+    font-size: 11px;
+  }
 }
 
 .navBar {
@@ -800,22 +827,19 @@ form.adopt-form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #3b85ce;
+  background-color: #2e73b8;
   border-radius: 0.75rem;
   padding-top: 20px;
+  padding-bottom: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 4px solid #fff;
-  color: #fff;
-  -webkit-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.8), inset 0 0px 15px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 0px 15px rgba(0, 0, 0, 0.8), inset 0 0px 15px rgba(0, 0, 0, 0.8);
-  margin-top: 15px;
-  margin-bottom: 15px;
+  color: white;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 
-form.adopt-form h1 {
+form.adopt-form .form-title {
   font-size: 29px;
-  margin-bottom: 20px;
 }
 
 form.adopt-form .question {
@@ -823,22 +847,21 @@ form.adopt-form .question {
   min-width: 95%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 20px;
-  border: 1.5px solid #fff;
-  margin-bottom: 20px;
+  padding: 10px;
   text-align: start;
 }
 
 form.adopt-form .question h1 {
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 form.adopt-form .question input {
   width: 100%;
-  padding-bottom: 4px;
+  padding: 3px;
   border-bottom: 1px solid #fff;
-  background-color: #5c99d6;
-  color: #fff;
+  background-color: #2e73b8;
+  color: white;
 }
 
 form.adopt-form .question input:focus {
@@ -846,19 +869,19 @@ form.adopt-form .question input:focus {
 }
 
 form.adopt-form .question input::-webkit-input-placeholder {
-  color: #f2f2f2;
+  color: #dbe3eb;
 }
 
 form.adopt-form .question input:-ms-input-placeholder {
-  color: #f2f2f2;
+  color: #dbe3eb;
 }
 
 form.adopt-form .question input::-ms-input-placeholder {
-  color: #f2f2f2;
+  color: #dbe3eb;
 }
 
 form.adopt-form .question input::placeholder {
-  color: #f2f2f2;
+  color: #dbe3eb;
 }
 
 #body {
@@ -872,11 +895,11 @@ form.adopt-form .question input::placeholder {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
-  margin: 3rem;
+  margin: 5rem;
 }
 
 .progress {
-  background: rgba(235, 235, 235, 0.9);
+  background: rgba(0, 0, 0, 0.4);
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -895,10 +918,10 @@ form.adopt-form .question input::placeholder {
 }
 
 .progress-value {
-  -webkit-animation: load 2s normal forwards;
-          animation: load 2s normal forwards;
-  -webkit-box-shadow: 0 10px 40px 0px black;
-          box-shadow: 0 10px 40px 0px black;
+  -webkit-animation: load 1.8s normal forwards;
+          animation: load 1.8s normal forwards;
+  -webkit-box-shadow: 0 10px 40px 0px white;
+          box-shadow: 0 10px 40px 0px white;
   border-radius: 100px;
   background: #3b85ce;
   height: 30px;
