@@ -15,7 +15,7 @@ function Form() {
     ];
     return (
         <form className='adopt-form'>
-            <h1>Adoption Application</h1>
+            <h1 className='form-title'>Adoption Application</h1>
             {questions.map(question=>{
                 return (
                     <div key={question.id} className='question'>

@@ -3,11 +3,11 @@
   align-items: center;
   display: flex;
   padding: 0;
-  margin: 3rem;
+  margin: 5rem;
 }
 
 .progress {
-  background: rgba(235, 235, 235, 0.9);
+  background: rgba(0, 0, 0, 0.4);
   justify-content: flex-start;
   border-radius: 100px;
   align-items: center;
@@ -20,8 +20,8 @@
 }
 
 .progress-value {
-  animation: load 2s normal forwards;
-  box-shadow: 0 10px 40px 0px rgb(0, 0, 0);
+  animation: load 1.8s normal forwards;
+  box-shadow: 0 10px 40px 0px rgb(255, 255, 255);
   border-radius: 100px;
   background: $clr-primary-4;
   height: 30px;
