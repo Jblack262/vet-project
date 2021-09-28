@@ -505,6 +505,10 @@ footer .row {
       justify-content: space-around;
 }
 
+footer .row.main {
+  margin-bottom: 1rem;
+}
+
 footer .row .col {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
