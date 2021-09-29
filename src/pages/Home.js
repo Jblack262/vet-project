@@ -11,7 +11,7 @@ function Home({data, selectPet}) {
     useEffect(() => {
         setTimeout(() => {
             setIsLoading()
-        }, 2000);
+        }, 500);
         function handleResize() { //set columns based on screen width
             if (window.innerWidth >= 1200) {
                 setColumns(3);
