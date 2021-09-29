@@ -1,0 +1,7 @@
+.skelCard {
+    width: clamp(30%, 400px, 90%);
+    height: 40vh;
+    margin: 0.5rem;
+    background-color: gray;
+    border-radius: $radius;
+}

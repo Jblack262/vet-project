@@ -3,9 +3,9 @@ import SkelCard from '../components/SkelCard';
 const Load = ({data , columns, selectPet}) => {
     return (
         <div className="cardContainer">
-            {data.map((pet) => {
+            {data.map(() => {
                 return (
-                    <SkelCard/>
+                    <SkelCard className='skelCard'/>
                 )
             })}
             {/* {
