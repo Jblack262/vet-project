@@ -2,10 +2,14 @@ import React from 'react';
 import InfoCard from '../components/InfoCard'
 import Banner from '../components/Banner'
 import '../styles/index.scss'
+import { Helmet } from 'react-helmet';
 
 function About() {
     return (
         <div>
+            <Helmet>
+                <title>About Page</title>
+            </Helmet>
             <Banner image="https://animalcareinfo.com/wp-content/uploads/2018/04/AdobeStock_129584968-1024x388.jpeg" title="About Us" />
             <div className="cardContainer">
                 <InfoCard title="About Us" content="The West-MEC Veterinary Sciences program has a partnership with Pinal County Animal Control to rescue animals. We are at the West mec northeast campus which is located at 1617 W Williams Dr Phoenix, AZ 85027. If you are interested in one of our pets, please schedule an appointment to visit with us as we are a public high school campus." />
