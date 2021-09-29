@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,22 +8,51 @@ import {Home, Adopt, About, PetPage, Error} from './pages';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-import {data} from './util/data';
+// import {data} from './util/data';
+
+const sanityClient = require('@sanity/client')
+const client = sanityClient({
+    projectId: 'ic8mtd9i',
+    dataset: 'production',
+    apiVersion: '2021-09-29', // use current UTC date - see "specifying API version"!
+    token:process.env.SANITY_APP_TOKEN, // or leave blank for unauthenticated usage
+    useCdn: true, // false if you want to ensure fresh data
+})
+const query = "*[_type == 'pet']";
 
 function App() {
-  const [currPet, setCurrPet] = useLocalStorage("pet", data[0]) ;
+  const [pets, setPets] = useState([])
 
+  const getInfo = async() => {
+    client.fetch(query).then((pets) => {
+      setPets(pets);
+      console.log(pets);
+    }).catch((error) => {console.log(error)})
+  }
+
+    useEffect(() => {
+    //  console.log(results());
+    (async () => {
+      try {
+        getInfo();
+      } catch (e) {
+        console.log(e)
+      }
+    })();
+    }, [])
+
+
+  const [currPet, setCurrPet] = useLocalStorage("pet", pets[0]) ;
   const selectPet = (pet) => {
     setCurrPet(pet);
   }
-
   return (
     <Router>
       <div className="app">
         <Navbar/>
 
         <Switch>
-            <Route path="/" exact component={() => <Home data={data} selectPet={selectPet}/>} />
+            <Route path="/" exact component={() => <Home data={pets} selectPet={selectPet}/>} />
             <Route path="/about" exact component={() => <About />} />
             <Route path="/adopt" exact component={() => <Adopt />} />
             <Route path="/pets" exact component={() => <PetPage pet={currPet} />} />
