@@ -31,8 +31,9 @@ function Home({data, selectPet}) {
             {isLoading && <Load />}
             {!isLoading && <div className="cardContainer">
                 {data.map((pet) => {
+                    console.log(pet)
                     return (
-                        <Card key={pet.id} pet={pet} selectPet={selectPet}/>
+                        <Card key={pet._id} pet={pet} selectPet={selectPet}/>
                     )
                 })}
                 {
