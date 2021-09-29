@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Card from '../components/Card';
 import Banner from '../components/Banner'
 import Load from '../components/Load'
+import { Helmet } from 'react-helmet';
 
 function Home({data, selectPet}) {
     const [columns, setColumns] = useState(1); //keeps track of number of columns to make empty divs to make grid look pretty
@@ -11,7 +12,7 @@ function Home({data, selectPet}) {
     useEffect(() => {
         setTimeout(() => {
             setIsLoading()
-        }, 2000);
+        }, 500);
         function handleResize() { //set columns based on screen width
             if (window.innerWidth >= 1200) {
                 setColumns(3);
@@ -27,6 +28,9 @@ function Home({data, selectPet}) {
       }, []);
     return (
         <div>
+            <Helmet>
+                <title>Home Page</title>
+            </Helmet>
             <Banner image="https://animalcareinfo.com/wp-content/uploads/2018/04/AdobeStock_129584968-1024x388.jpeg" title="Veterinary  Science"/>
             {isLoading && <Load />}
             {!isLoading && <div className="cardContainer">

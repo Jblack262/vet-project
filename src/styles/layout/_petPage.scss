@@ -3,19 +3,26 @@
 .petContainer {
   display: flex;
   justify-content: space-around;
-  //   flex-wrap: wrap;
+  flex-wrap: wrap;
   .petDescription {
-    margin-inline: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    color: $clr-white;
+    background-color: $clr-primary-3;
+    box-shadow: inset $dark-shadow, $dark-shadow;
+    height: 18rem;
+    width: 32rem;
+    border-radius: $radius;
+    margin-top: 5rem;
+    margin-right: 7rem;
     .name {
-      margin: 0.5rem auto;
+      margin-bottom: 1rem;
     }
     .list {
       list-style-type: circle;
       width: max-content;
       margin-inline: auto;
+    }
+    .description {
+      margin-left: 1rem;
     }
   }
 }
