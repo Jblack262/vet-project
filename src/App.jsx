@@ -24,21 +24,20 @@ function App() {
   const [pets, setPets] = useState([])
 
   const getInfo = async() => {
-    client.fetch(query).then((pets) => {
+    return client.fetch(query);
+    /* client.fetch(query).then((pets) => {
       setPets(pets);
       console.log(pets);
-    }).catch((error) => {console.log(error)})
+    }).catch((error) => {console.log(error)}) */
   }
 
     useEffect(() => {
     //  console.log(results());
-    (async () => {
-      try {
-        getInfo();
-      } catch (e) {
-        console.log(e)
-      }
-    })();
+      getInfo().then((pets) => {
+        // const data = pets;
+        setPets(pets);
+        console.log(pets)
+      }).catch((error) => {console.log(error)});
     }, [])
 
 
@@ -52,7 +51,7 @@ function App() {
         <Navbar/>
 
         <Switch>
-            <Route path="/" exact component={() => <Home data={pets} selectPet={selectPet}/>} />
+            <Route path="/" exact component={() => <Home pets={pets} selectPet={selectPet}/>} />
             <Route path="/about" exact component={() => <About />} />
             <Route path="/adopt" exact component={() => <Adopt />} />
             <Route path="/pets" exact component={() => <PetPage pet={currPet} />} />

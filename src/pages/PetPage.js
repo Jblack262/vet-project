@@ -4,7 +4,7 @@ import Form from '../components/Form';
 import { Helmet } from 'react-helmet';
 
 function PetPage({pet}) {
-    const {name, species, gender, breed, age, campus, images} = pet;
+    const {name, species, gender, breed, age, location, images} = pet;
     // console.log(images);
     return (
         <>
@@ -20,8 +20,8 @@ function PetPage({pet}) {
                     <li>{species}</li>
                     <li>{gender}</li>
                     <li>{breed}</li>
-                    <li>{age}</li>
-                    <li>{campus}</li>
+                    <li>{age} months old</li>
+                    <li>{location}</li>
                 </ul>
             </div>
         </div>
