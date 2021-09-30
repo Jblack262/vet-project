@@ -20,7 +20,7 @@ function Card({pet, selectPet}) {
             <img src={imgSrc} alt="cool dog" />
             <div className="content">
                 <h2>{name}</h2>
-                <p>{gender} - {species} - {breed} - {age} - available at {campus}</p>
+                <p>{gender} - {species} - {breed} - {age} months old - available at {location}</p>
                 <div className="btnContainer">
                     <Link onClick={() => selectPet(pet)} to="/pets">ADOPT ME</Link>
                 </div>

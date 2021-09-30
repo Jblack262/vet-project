@@ -1,7 +1,22 @@
 .skelCard {
-    width: clamp(30%, 400px, 90%);
-    height: 40vh;
-    margin: 0.5rem;
-    background-color: gray;
-    border-radius: $radius;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  margin: 0;
+  margin-block: 0.5rem;
+  border-radius: $radius;
+
+  animation: skeletonLoad 2s ease reverse infinite;
+}
+
+@keyframes skeletonLoad {
+  0% {
+    background-color: $clr-gray-1;
+  }
+  50% {
+    background-color: $clr-accent-0;
+  }
+  100% {
+    background-color: $clr-gray-1;
+  }
 }

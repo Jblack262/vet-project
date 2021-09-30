@@ -28,8 +28,8 @@ function PetPage({pet}) {
                     <li>{species}</li>
                     <li>{gender}</li>
                     <li>{breed}</li>
-                    <li>{age}</li>
-                    <li>{campus}</li>
+                    <li>{age} months old</li>
+                    <li>{location}</li>
                 </ul>
             </div>
         </div>

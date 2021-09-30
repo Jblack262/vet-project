@@ -21,24 +21,20 @@ const client = sanityClient({
 const query = "*[_type == 'pet']";
 
 function App() {
-  const [pets, setPets] = useState([])
+  const [pets, setPets] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const getInfo = async() => {
-    client.fetch(query).then((pets) => {
-      setPets(pets);
-      console.log(pets);
-    }).catch((error) => {console.log(error)})
+    return client.fetch(query);
   }
 
     useEffect(() => {
-    //  console.log(results());
-    (async () => {
-      try {
-        getInfo();
-      } catch (e) {
-        console.log(e)
-      }
-    })();
+      getInfo()
+      .then((pets) => {
+        setPets(pets);
+        setIsLoading(false);
+        /* console.log(pets) */
+      }).catch((error) => {console.log(error)});
     }, [])
 
 
@@ -50,9 +46,8 @@ function App() {
     <Router>
       <div className="app">
         <Navbar/>
-
         <Switch>
-            <Route path="/" exact component={() => <Home data={pets} selectPet={selectPet}/>} />
+            <Route path="/" exact component={() => <Home isLoading={isLoading} pets={pets} selectPet={selectPet}/>} />
             <Route path="/about" exact component={() => <About />} />
             <Route path="/adopt" exact component={() => <Adopt />} />
             <Route path="/pets" exact component={() => <PetPage pet={currPet} />} />
