@@ -1,6 +1,7 @@
 import React from 'react';
 import Slideshow from '../components/Slideshow';
 import Form from '../components/Form';
+import { Helmet } from 'react-helmet';
 
 function PetPage({pet}) {
     const {name, species, gender, breed, age, campus, images} = pet;
@@ -8,6 +9,9 @@ function PetPage({pet}) {
     return (
         <>
         <div className="petContainer">
+            <Helmet>
+                <title>Pet Page</title>
+            </Helmet>
             <Slideshow images={images} name={name}/>
             <div className="petDescription">
                 <h1 className="name">{name}</h1>
