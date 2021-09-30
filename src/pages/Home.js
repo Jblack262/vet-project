@@ -5,7 +5,6 @@ import Load from '../components/Load'
 import { Helmet } from 'react-helmet';
 
 function Home({data, selectPet}) {
-    const [columns, setColumns] = useState(1); //keeps track of number of columns to make empty divs to make grid look pretty
 
     // const [windowWidth, setWindowWidth] = useState(undefined);
     const [isLoading,setIsLoading] = useState(true)
@@ -13,18 +12,6 @@ function Home({data, selectPet}) {
         setTimeout(() => {
             setIsLoading()
         }, 500);
-        function handleResize() { //set columns based on screen width
-            if (window.innerWidth >= 1200) {
-                setColumns(3);
-            } else if (window.innerWidth < 800) {
-                setColumns(1)
-            } else {
-                setColumns(2)
-            }
-        }
-        window.addEventListener("resize", handleResize);
-        handleResize();
-        return () => window.removeEventListener("resize", handleResize);
       }, []);
     return (
         <div>
@@ -40,17 +27,6 @@ function Home({data, selectPet}) {
                         <Card key={pet._id} pet={pet} selectPet={selectPet}/>
                     )
                 })}
-                {
-                    [...Array(columns - (data.length % columns))].map((element, index) => { //gets the remainder of cards that should be left to make the flexbox follow a grid pattern
-                        if (data.length % columns !== 0) {
-                            return (
-                                <div key={index} className="card empty" />
-                            )
-                        } else {
-                            return null;
-                        }
-                    })
-                }
             </div>}
         </div>
     )

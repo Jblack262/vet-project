@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 
 function Card({pet, selectPet}) {
     const {name, species, gender, breed, age, campus} = pet;
+    const ref = pet.images[0].assets._ref;
     return (
         <div className="card">
             <div className="imgContainer">
