@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
-import {GrMenu, GrClose} from 'react-icons/gr'
+import {GrMenu, GrClose} from 'react-icons/gr';
 
 function Navbar(props) {
     const [open, setOpen] = useState(false);

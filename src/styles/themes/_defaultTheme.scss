@@ -1,9 +1,13 @@
+@use './pallete-functions';
+
+$main: hsl(210, 60%, 52%);
+
 /* dark shades of primary color*/
 $clr-primary-0: hsl(210, 60%, 21%);
 $clr-primary-1: hsl(210, 60%, 29%);
 $clr-primary-2: hsl(210, 60%, 37%);
 $clr-primary-3: hsl(210, 60%, 45%);
-$clr-primary-4: hsl(210, 60%, 52%); /* The primary/main color */
+$clr-primary-4: $main; /* The primary/main color */
 $clr-primary-5: hsl(210, 60%, 60%);
 $clr-primary-6: hsl(210, 60%, 67%);
 $clr-primary-7: hsl(210, 60%, 74%);

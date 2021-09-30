@@ -4,7 +4,15 @@ import Form from '../components/Form';
 import { Helmet } from 'react-helmet';
 
 function PetPage({pet}) {
-    const {name, species, gender, breed, age, campus, images} = pet;
+    const {name, species, gender, breed, age, campus} = pet;
+    var {images} = pet;
+    function imgUrl(index) {
+        const ref = pet.images[index].asset._ref;
+        return `https://cdn.sanity.io/images/ic8mtd9i/production/${ref.split('-')[1]}-${ref.split('-')[2]}.${ref.split('-')[3]}`;
+    }
+    images = images.map((image, index)=>{
+        return imgUrl(index);
+    })
     // console.log(images);
     return (
         <>

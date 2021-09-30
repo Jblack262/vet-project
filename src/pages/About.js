@@ -1,7 +1,6 @@
 import React from 'react';
-import InfoCard from '../components/InfoCard'
-import Banner from '../components/Banner'
-import '../styles/index.scss'
+import InfoCard from '../components/InfoCard';
+import Banner from '../components/Banner';
 import { Helmet } from 'react-helmet';
 
 function About() {

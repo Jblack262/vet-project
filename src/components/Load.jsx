@@ -1,5 +1,4 @@
-import React from 'react'
-import '../styles/index.scss'
+import React from 'react';
 
 const Load = () => {
     return (
