@@ -3,7 +3,7 @@
 @use "sass:list";
 
 @function mono($color, $shadeNum) {
-    @return lighten(color.change($color, $lightness: 0%), 1% * $shadeNum);
+    @return color.change($color, $lightness: $shadeNum * 1%);
 }
 
 @function comp($color) {
@@ -72,6 +72,7 @@
 }
 
 @function split($color, $index: 1, $split: 1) {
+    //change the color by a factor (split) of the ryb color space, and by an index of 1 and above (example: split(red, 2, 2) gives the 180deg (index * 360deg / split), or the opposite, distance from red on the color wheel, giving us lime (complementary to red)
     $colorLightness: color.lightness($color);
     $colorSaturation: color.saturation($color);
     $color: color.change($color, $lightness: 50%, $saturation: 100%);
@@ -168,18 +169,24 @@
     // @for $i from 1 through 240{
     //     $ryb: append($ryb, adjust-hue(blue, math.div(120, 240) * $i));
     // }
-    $diff: 0;
+    $length: 720;
     @if not index($ryb, $color) {
         @while not index($ryb, $color) {
             $color: adjust-hue($color, 0.1deg);
+            $diff: $diff + 0.1;
         }
     }
-    $index: ($index * math.div(720, $split) % 720);
-    @if (index($ryb, $color) + $index) % 720 == 0 {
+    @if math.div($length, $split) % 1 != 0 {
+        @while math.div($length, $split) % 1 != 0 {
+            $split: $split + 0.1;
+        };
+    }
+    $index: ($index * math.div($length, $split) % $length);
+    @if (index($ryb, $color) + $index) % $length == 0 {
         @return red;
     }
     @return color.change(
-        nth($ryb, (index($ryb, $color) + $index) % 720),
+        nth($ryb, (index($ryb, $color) + $index) % $length),
         $lightness: 50%,
         $saturation: 100%
     );

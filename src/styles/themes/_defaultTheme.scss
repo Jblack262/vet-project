@@ -1,62 +1,67 @@
-@use './pallete-functions';
+@import './pallete-functions';
 
 $main: hsl(210, 60%, 52%);
 
 /* dark shades of primary color*/
-$clr-primary-0: hsl(210, 60%, 21%);
-$clr-primary-1: hsl(210, 60%, 29%);
-$clr-primary-2: hsl(210, 60%, 37%);
-$clr-primary-3: hsl(210, 60%, 45%);
+$clr-primary-0: mono($main, 21);
+$clr-primary-1: mono($main, 29);
+$clr-primary-2: mono($main, 37);
+$clr-primary-3: mono($main, 45);
 $clr-primary-4: $main; /* The primary/main color */
-$clr-primary-5: hsl(210, 60%, 60%);
-$clr-primary-6: hsl(210, 60%, 67%);
-$clr-primary-7: hsl(210, 60%, 74%);
-$clr-primary-8: hsl(210, 60%, 81%);
-$clr-primary-9: hsl(210, 60%, 88%);
+$clr-primary-5: mono($main, 60);
+$clr-primary-6: mono($main, 67);
+$clr-primary-7: mono($main, 74);
+$clr-primary-8: mono($main, 81);
+$clr-primary-9: mono($main, 88);
 /* lighter shades of primary color */
 
+$sec: comp($main);
+
 /* dark shades of secondary color*/
-$clr-secondary-0: hsl(30, 80%, 21%);
-$clr-secondary-1: hsl(30, 80%, 29%);
-$clr-secondary-2: hsl(30, 80%, 37%);
-$clr-secondary-3: hsl(30, 80%, 45%);
-$clr-secondary-4: hsl(30, 80%, 52%); /* secondary color */
-$clr-secondary-5: hsl(30, 80%, 60%);
-$clr-secondary-6: hsl(30, 80%, 67%);
-$clr-secondary-7: hsl(30, 80%, 74%);
-$clr-secondary-8: hsl(30, 80%, 81%);
-$clr-secondary-9: hsl(30, 80%, 88%);
+$clr-secondary-0: mono($sec, 21);
+$clr-secondary-1: mono($sec, 29);
+$clr-secondary-2: mono($sec, 37);
+$clr-secondary-3: mono($sec, 45);
+$clr-secondary-4: mono($sec, 52); /* secondary color */
+$clr-secondary-5: mono($sec, 60);
+$clr-secondary-6: mono($sec, 67);
+$clr-secondary-7: mono($sec, 74);
+$clr-secondary-8: mono($sec, 81);
+$clr-secondary-9: mono($sec, 88);
 /* lighter shades of secondary color */
 
+$gray: gray;
 /* dark shades of accent color*/
-$clr-accent-0: hsl(0, 0%, 50%);
-$clr-accent-1: hsl(0, 0%, 55%);
-$clr-accent-2: hsl(0, 0%, 60%);
-$clr-accent-3: hsl(0, 0%, 65%);
-$clr-accent-4: hsl(0, 0%, 70%); /* accent color */
-$clr-accent-5: hsl(0, 0%, 75%);
-$clr-accent-6: hsl(0, 0%, 80%);
-$clr-accent-7: hsl(0, 0%, 85%);
-$clr-accent-8: hsl(0, 0%, 80%);
-$clr-accent-9: hsl(0, 0%, 95%);
+$clr-accent-0: $gray;
+$clr-accent-1: mono($gray, 55);
+$clr-accent-2: mono($gray, 60);
+$clr-accent-3: mono($gray, 65);
+$clr-accent-4: mono($gray, 70); /* accent color */
+$clr-accent-5: mono($gray, 75);
+$clr-accent-6: mono($gray, 80);
+$clr-accent-7: mono($gray, 85);
+$clr-accent-8: mono($gray, 90);
+$clr-accent-9: mono($gray, 95);
 /* lighter shades of accent color */
 
-$clr-gray-0: hsl(0, 0%, 25%);
-$clr-gray-1: hsl(0, 0%, 30%);
-$clr-gray-2: hsl(0, 0%, 35%);
-$clr-gray-3: hsl(0, 0%, 40%);
+$clr-gray-0: mono($gray, 25);
+$clr-gray-1: mono($gray, 30);
+$clr-gray-2: mono($gray, 35);
+$clr-gray-3: mono($gray, 40);
+
+$grey: hsl(210, 30%, 16%);
 
 /* darkest grey - used for headings */
-$clr-grey-0: hsl(210, 60%, 16%);
-$clr-grey-1: hsl(210, 30%, 23%);
-$clr-grey-2: hsl(210, 30%, 30%);
-$clr-grey-3: hsl(210, 30%, 39%);
-$clr-grey-4: hsl(210, 30%, 49%); /* grey used for paragraphs */
-$clr-grey-5: hsl(210, 30%, 60%);
-$clr-grey-6: hsl(210, 30%, 70%);
-$clr-grey-7: hsl(210, 30%, 80%);
-$clr-grey-8: hsl(210, 30%, 89%);
-$clr-grey-9: hsl(210, 30%, 96%);
+$clr-grey-0: $grey;
+$clr-grey-1: mono($grey, 23);
+$clr-grey-2: mono($grey, 30);
+$clr-grey-3: mono($grey, 39);
+$clr-grey-4: mono($grey, 49); /* grey used for paragraphs */
+$clr-grey-5: mono($grey, 60);
+$clr-grey-6: mono($grey, 70);
+$clr-grey-7: mono($grey, 80);
+$clr-grey-8: mono($grey, 89);
+$clr-grey-9: mono($grey, 89);
 /* lightest grey - used for outlines */
 
 $font-dark: black;

@@ -3,6 +3,10 @@ import {BiLeftArrow, BiRightArrow} from 'react-icons/bi';
 
 function Slideshow({images, name}) {
     console.log(images)
+    function imgUrl(index) {
+        const ref = images[index].asset._ref;
+        return `https://cdn.sanity.io/images/ic8mtd9i/production/${ref.split('-')[1]}-${ref.split('-')[2]}.${ref.split('-')[3]}`;
+    }
     const [index, setIndex] = React.useState(0);
     const slideLeft = () => {
         if (index > 0) {
@@ -25,7 +29,7 @@ function Slideshow({images, name}) {
                     <BiLeftArrow onClick={() => slideLeft()}/>
                 </div>
 
-                {images[index] && <img src={images[index]} alt={name} />}
+                {images[index] && <img src={imgUrl(index)} alt={name} />}
 
                 <div className="iconContainer right">
                     <BiRightArrow onClick={() => slideRight()}/>

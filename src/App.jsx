@@ -32,7 +32,7 @@ function App() {
       getInfo()
       .then((pets) => {
         setPets(pets);
-        setIsLoading(false);
+        setTimeout(()=>{setIsLoading(false)}, 1200)
         /* console.log(pets) */
       }).catch((error) => {console.log(error)});
     }, [])
